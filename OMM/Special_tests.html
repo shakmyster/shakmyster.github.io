@@ -7,17 +7,31 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script> src="https://shakmyster.github.io/ShakBSJavascriptCOMLEX.js"</script>
+		
+	
 	</head>
 	<body>
 	<div class="container">
-		<h1><a href="file:///Users/main/Desktop/COMLEX%20bootstrap/comlex.html">Special Tests</a></h1>
+		<h1><a href="https://shakmyster.github.io/index.html">Special Tests</a></h1>
 	</div>
-	<script>
-	$(document).ready(function(){
+<div>		
+<script>
+  $(document).ready(function(){
 		$('[data-toggle="popover"]').popover(); 
 	});
+	</script>	
+	<script>
+	$('.preview').popover({
+		'trigger':'hover',
+		'html':true,
+		'content':function(){
+			return "<img src='"+$(this).data('imageUrl')+"'>"
+			container: ".parent";
+		}
+	});
 	</script>
+</div>
+
 		<div>
 		<li><a href=“”>Cervical Spine</a>
 			<ul>
@@ -82,13 +96,12 @@
 				<li><a href=“”>Lachman's Test (ACL)</a>
 				<li><a href=“”>McMurray's Test (Meniscii)</a>
 				<li><a href=“”>Patellar Grind Test</a>
-				<li><a href="../image/Varus_Valgus_test.png" id="VarusValgus">Valgus and Varus Stress Test</a>
-				<script>
-				var img = '<img src= image/Varus_Valgus_test.png />';
-
-				$("#VarusValgus").popover({ content: img, html:true, trigger:'hover'});
-				</script>
+				<li><a href="#" target="_blank" 
+							data-image-url="https://shakmyster.github.io/image/Varus_Valgus_test.png" class="preview" rel="popover" data-trigger="focus">Valgus and Varus Stress Test</a>
+								
+				
 			</ul>
+
 		
 		</div>
 	</body>
